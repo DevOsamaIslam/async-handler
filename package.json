@@ -1,5 +1,5 @@
 {
-  "name": "async-handler",
+  "name": "async-handler-ts",
   "version": "1.0.0",
   "description": "Handles async functions gracefully and returns [result, error]",
   "main": "index.js",
@@ -14,6 +14,10 @@
     "node"
   ],
   "author": "Osama",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevOsamaIslam/async-handler-ts"
+  },
   "license": "MIT",
   "devDependencies": {
     "rollup": "^1.32.1",
