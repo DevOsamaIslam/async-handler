@@ -1,0 +1,25 @@
+{
+  "name": "async-handler",
+  "version": "1.0.0",
+  "description": "Handles async functions gracefully and returns [result, error]",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "typescript",
+    "async",
+    "error-handling",
+    "node"
+  ],
+  "author": "Osama",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.32.1",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
