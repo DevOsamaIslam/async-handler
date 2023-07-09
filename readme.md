@@ -58,4 +58,4 @@ Contributions to `async-handler-ts` are welcome! If you encounter any issues, ha
 
 ## License
 
-This project is licensed under the [MIT license](https://github.com/DevOsamaIslam/async-handler-ts/blob/main/LICENSE).
+This project is licensed under the [MIT license](https://github.com/DevOsamaIslam/async-handler-ts/blob/master/LICENSE).
