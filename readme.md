@@ -1,13 +1,13 @@
 # async-handler-ts
 
-`async-handler-ts` is an npm package that provides a utility function for handling asynchronous operations in TypeScript. It simplifies the process of error handling and result extraction, allowing you to write cleaner and more concise code.
+`async-handler-ts` provides a utility function for handling asynchronous operations in TypeScript. It simplifies the process of error handling and result extraction, allowing you to write cleaner and more concise code.
 
 ## Installation
 
 You can install `async-handler-ts` via npm or yarn:
 
 ```bash
-npm install async-handler-ts
+npm i async-handler-ts
 
 # or
 
@@ -22,7 +22,7 @@ To use `async-handler-ts`, import the `asyncHandler` function from the package:
 import { asyncHandler } from "async-handler-ts"
 ```
 
-The `asyncHandler` function takes a single argument, which is the asynchronous function you want to handle. It returns a promise that resolves to an array containing the result and error (if any) of the function execution.
+The `asyncHandler` function takes a single argument, which is the asynchronous function you want to handle. It returns a promise that resolves to a tuple (array of just two elements) containing the result and error (if any) of the function execution.
 
 Here's an example of how to use `asyncHandler`:
 
@@ -48,15 +48,13 @@ async function main() {
 main()
 ```
 
-In the above example, `fetchData` is an asynchronous function that returns a promise. By wrapping it with `asyncHandler`, you can conveniently handle any errors that occur during its execution. The result and error are destructured from the returned array for further processing.
+By wrapping your function with `asyncHandler`, you can conveniently handle any errors that occur during its execution. 
 
 If the asynchronous function succeeds, the `result` variable will hold the resolved value, and `error` will be `undefined`. Conversely, if an error is thrown or the promise is rejected, `result` will be `undefined`, and `error` will contain the thrown error.
 
 ## Contribution
 
 Contributions to `async-handler-ts` are welcome! If you encounter any issues, have suggestions, or would like to add new features, please open an issue or submit a pull request on the [GitHub repository](https://github.com/DevOsamaIslam/async-handler-ts).
-
-When contributing, please ensure that your code adheres to the existing code style and that you write appropriate tests for any new functionality.
 
 ## License
 
