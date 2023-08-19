@@ -22,9 +22,11 @@ To use `async-handler-ts`, import the `asyncHandler` function from the package:
 import { asyncHandler } from "async-handler-ts"
 ```
 
-The `asyncHandler` function takes a single argument, which is the asynchronous function you want to handle. It returns a promise that resolves to a tuple (array of just two elements) containing the result and error (if any) of the function execution.
+The `asyncHandler` function takes a single argument, which can either be an asynchronous function you want to handle or a direct promise. It returns a promise that resolves to a tuple (an array of just two elements) containing the result and error (if any).
 
-Here's an example of how to use `asyncHandler`:
+### Handling Asynchronous Functions
+
+Here's an example of how to use `asyncHandler` with an asynchronous function:
 
 ```typescript
 async function fetchData(): Promise<string> {
@@ -37,7 +39,7 @@ async function fetchData(): Promise<string> {
 }
 
 async function main() {
-  const [result, error] = await asyncHandler(fetchData())
+  const [result, error] = await asyncHandler(fetchData)
   if (error) {
     console.error("An error occurred:", error)
   } else {
@@ -48,9 +50,26 @@ async function main() {
 main()
 ```
 
-By wrapping your function with `asyncHandler`, you can conveniently handle any errors that occur during its execution. 
+### Handling Direct Promises
 
-If the asynchronous function succeeds, the `result` variable will hold the resolved value, and `error` will be `undefined`. Conversely, if an error is thrown or the promise is rejected, `result` will be `undefined`, and `error` will contain the thrown error.
+You can also use `asyncHandler` directly with promises:
+
+```typescript
+const dataPromise = Promise.resolve("Done!")
+
+async function main() {
+  const [result, error] = await asyncHandler(dataPromise)
+  if (error) {
+    console.error("An error occurred:", error)
+  } else {
+    console.log("Result:", result)
+  }
+}
+
+main()
+```
+
+By wrapping your function or promise with `asyncHandler`, you can conveniently handle any errors that occur. If the operation succeeds, the `result` variable will hold the resolved value, and `error` will be `undefined`. Conversely, if an error is thrown or the promise is rejected, `result` will be `undefined`, and `error` will contain the thrown error.
 
 ## Contribution
 
@@ -59,3 +78,5 @@ Contributions to `async-handler-ts` are welcome! If you encounter any issues, ha
 ## License
 
 This project is licensed under the [MIT license](https://github.com/DevOsamaIslam/async-handler-ts/blob/master/LICENSE).
+
+---
