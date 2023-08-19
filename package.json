@@ -1,9 +1,10 @@
 {
   "name": "async-handler-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Handles async functions gracefully and returns [result, error]",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
