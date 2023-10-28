@@ -4,7 +4,6 @@
   "description": "Handles async functions gracefully and returns [result, error]",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
